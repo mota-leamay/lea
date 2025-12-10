@@ -1,114 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .calculator {
-            width: 300px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .input-group {
-            margin-bottom: 10px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="number"],
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            font-size: 18px;
-            border: none;
-            border-radius: 3px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #367C39;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1> (Simple Calculator)</h1>
-    <div class="calculator">
-        <div class="input-group">
-            <label for="num1">Enter 1st no:</label>
-            <input type="number" id="num1">
-        </div>
-        <div class="input-group">
-            <label for="operator">Enter operator (+, -, *, /):</label>
-            <input type="text" id="operator">
-        </div>
-        <div class="input-group">
-            <label for="num2">Enter 2nd no:</label>
-            <input type="number" id="num2">
-        </div>
-        <button onclick="compute()">Compute</button>
-        <div class="input-group">
-            <label for="result">Result:</label>
-            <input type="text" id="result" readonly>
-        </div>
-    </div>
+    <header>
+        <nav>
+            <h1 class="logo">MY PORTFOLIO</h1>
+            <ul class="nav-links">
+                <li><a href="#ABOUT">ABOUT</a></li>
+                <li><a href="#PROJECTS">PROJECTS</a></li>
+                <li><a href="#CONTACT">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        function compute() {
-            let num1 = parseFloat(document.getElementById('num1').value);
-            let num2 = parseFloat(document.getElementById('num2').value);
-            let operator = document.getElementById('operator').value;
-            let result = 0;
+    <section class="hero">
+        <h2>Hello, I'm <span>LEA MAY</span></h2>
+        <p>Developer • Designer • Creator</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
 
-            if (isNaN(num1) || isNaN(num2)) {
-                alert('Please enter valid numbers');
-                return;
-            }
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate developer who loves creating clean and functional web experiences.
+        </p>
+    </section>
 
-            switch (operator) {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    if (num2 === 0) {
-                        alert('Division by zero is not allowed');
-                        return;
-                    }
-                    result = num1 / num2;
-                    break;
-                default:
-                    alert('Invalid operator');
-                    return;
-            }
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
 
-            document.getElementById('result').value = result;
-        }
-    </script>
-</body>
-</html>
+        <div class="project-card">
+            <h3>Project One</h3>
+            <a href="https://midtermproject12.netlify.app/ target="_blank" class="btn">Netlify</a>
+            <a href="https://github.com/lea-may/midterm-project" target="_blank" class="btn github">GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Project Two</h3>
+             <a href="https://silver-moxie-27e96c.netlify.app/" target="_blank" class="btn">Netlify</a>
+            <a href="https://github.com/mota-leamay/lea" target="_blank" class="btn github">GitHub</a>
+            
+           
+        
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: motaleamay@gmail.com</p>
+        <p>call us here: 09454755116</p>
+    </section>
+
+    <footer>
+        <p>© LEA MAY MOTA, 2025</p>
+    </footer>
+
+    
